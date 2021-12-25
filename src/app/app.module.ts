@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from '../mateial.module';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './src/app/store/reducers';
 @NgModule({
     declarations: [AppComponent, SidenavComponent],
     imports: [
@@ -13,6 +16,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
         AppRoutingModule,
         BrowserAnimationsModule,
         MaterialModule,
+        StoreModule.forRoot(reducers),
     ],
     providers: [],
     bootstrap: [AppComponent],
