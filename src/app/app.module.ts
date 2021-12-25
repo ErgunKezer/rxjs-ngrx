@@ -8,7 +8,7 @@ import { MaterialModule } from '../mateial.module';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 
 import { StoreModule } from '@ngrx/store';
-import { reducers } from './src/app/store/reducers';
+import { booksReducer } from './src/app/book/books.reducer';
 @NgModule({
     declarations: [AppComponent, SidenavComponent],
     imports: [
@@ -16,7 +16,7 @@ import { reducers } from './src/app/store/reducers';
         AppRoutingModule,
         BrowserAnimationsModule,
         MaterialModule,
-        StoreModule.forRoot(reducers),
+        StoreModule.forRoot(booksReducer),
     ],
     providers: [],
     bootstrap: [AppComponent],
