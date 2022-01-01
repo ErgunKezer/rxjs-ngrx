@@ -8,7 +8,7 @@ import {
     retrieveBookList,
     addBook,
     removeBook,
-} from './src/app/state/book-list/book.actions';
+} from './src/app/state/book-list/books.actions';
 import { BookService } from './src/app/services/books.service';
 @Component({
     selector: 'app-root',

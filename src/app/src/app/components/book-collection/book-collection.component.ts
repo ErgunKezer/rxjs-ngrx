@@ -8,7 +8,6 @@ import { Book } from '../../state/book-list/books.model';
     styleUrls: ['./book-collection.component.scss'],
 })
 export class BookCollectionComponent {
-    // @Input() books: ReadonlyArray<Book> | null = [];
-    @Input() books: any = [];
+    @Input() books: ReadonlyArray<Book | undefined> | null = [];
     @Output() remove = new EventEmitter<string>();
 }
