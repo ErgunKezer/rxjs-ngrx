@@ -1,0 +1,10 @@
+<div>
+    <div>
+        <span>Home: {{ homeScore$ | async }}</span>
+        <button (click)="handleHomeClick()">+</button>
+    </div>
+    <div>
+        <span>Away: {{ awayScore$ | async }}</span>
+        <button (click)="handleAwayClick()">+</button>
+    </div>
+</div>

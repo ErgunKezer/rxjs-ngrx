@@ -10,17 +10,20 @@ import { MaterialModule } from '../mateial.module';
 
 import { booksReducer } from './src/app/state/book-list/books.reducer';
 import { collectionReducer } from './src/app/state/book-list/collection.reducer';
+import { scoreboardReducer } from './src/app/state/scoreboard/scoreboard.reducer';
 import { BookService } from './src/app/services/books.service';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { BookListComponent } from './src/app/components/book-list/book-list.component';
 import { BookCollectionComponent } from './src/app/components/book-collection/book-collection.component';
+import { ScoreboardComponent } from './src/app/components/scoreboard/scoreboard.component';
 @NgModule({
     declarations: [
         AppComponent,
         SidenavComponent,
         BookCollectionComponent,
         BookListComponent,
+        ScoreboardComponent,
     ],
     imports: [
         BrowserModule,
@@ -31,6 +34,7 @@ import { BookCollectionComponent } from './src/app/components/book-collection/bo
         StoreModule.forRoot({
             books: booksReducer,
             collection: collectionReducer,
+            game: scoreboardReducer,
         }),
         StoreDevtoolsModule.instrument({
             maxAge: 25,
